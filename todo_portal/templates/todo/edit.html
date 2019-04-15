@@ -1,0 +1,12 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+<h1> Edit Wizard! </h1>
+<form action="" method="POST" autocomplete="on" enctype="application/x-www-form-urlencoded">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="update">
+</form>
+
+{% endblock content %}

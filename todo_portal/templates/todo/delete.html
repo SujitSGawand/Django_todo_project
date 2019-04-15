@@ -1,0 +1,14 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+<h1> Delete Wizard! </h1>
+<h2>Warning!</h2>
+<p>Are you sure to delete this file: <i>{{task.title}}</i></p>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Delete">
+</form>
+
+{% endblock content %}

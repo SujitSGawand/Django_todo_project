@@ -1,0 +1,15 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+<div class = 'details'>
+    <h2>{{ task.titleTask }} - <i>{{ task.titleAuthor }}</i></h2>
+    <p>{{ task.textTask }}</p>
+    <p>{{ task.statusTask }}</p>
+</div>
+<div class = "config">
+    <button><a href="{% url 'edit' task.pk %}"> edit </a></button>
+    <button><a href="{% url 'delete' task.pk %}"> delete </a></button>
+</div>
+
+{% endblock content%}

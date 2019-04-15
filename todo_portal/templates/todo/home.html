@@ -1,0 +1,12 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+{% for var1 in object_list %}
+    <div class="task">
+        <h4><a href="{% url 'detail' var1.pk%}">{{ var1.titleTask }}</a> - <i>{{ var1.authorTask }}</i></h4>
+        <p>{{ var1.textTask }}</p>
+    </div>
+{% endfor %}
+
+{% endblock content %}
